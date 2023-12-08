@@ -30,8 +30,9 @@ It will return the code below.
 |404|Access non-existent URL|
 |429|Request limit exceeded|
 |500|Unknown error|
-## Header setting
 
+
+## Header setting
 ### This section will be added to all API request headers
 
 |JSON Key|Type|Size|Required|encryption|Value description|
