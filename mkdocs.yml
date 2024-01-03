@@ -1,5 +1,14 @@
-site_name: Seat Chart Docs
-
+site_name: SeatChartDocs
+site_url: http://localhost:8000/
+nav:
+  - Introduction: Introduction/index.md
+  - Layout and Design: Layout and Design/index.md
+  - Architecture and Convention:
+      - Architecture: Architecture and Convention/Architecture/index.md
+      - Convention:
+          - Các quy tắc khác: Architecture and Convention/Convention/Các quy tắc khác/index.md
+          - API Back-End: Architecture and Convention/Convention/API Back-End/index.md
+          - Font-End: Architecture and Convention/Convention/Front-End/index.md
 extra_css:
   - stylesheets/extra.css
 theme:
