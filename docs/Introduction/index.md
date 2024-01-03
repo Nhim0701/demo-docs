@@ -1,17 +1,8 @@
-# Introduction
+# Seat Chart Project
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+With the need to constantly change seats according to each project, plus the expanding company scale, changing seats in the traditional way (on paper) becomes difficult and inconvenient.
 
-## Commands
+With the traditional method, it is not possible to produce many manuscripts at the same time, nor can you pre-arrange manuscripts for the future.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+For a large-scale company or an event that requires meticulous seating, arrangement and an overview are essential.
+The Seat Chart system was born as an inevitable need for current scale expansion.
