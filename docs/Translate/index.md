@@ -5,7 +5,7 @@ Created Date : 2024/01/03
 Messenger
 
 |メッセージID|メッセージ（日本語）|メッセージ（ベトナム語）|メッセージ（英語）|
-|-----|-----|-----|-----|
+|-----------|------------------------------|------------------------------------------|-----------------------------------------|
 |SC_MW000001|このシートチャートを複製しますか?|Bạn có muốn sao chép seat chart này không?|Do you want to duplicate this seat chart?|
 |SC_MW000002|{0}を削除しますか?|Bạn có muốn xóa {0} này không?|Do you want to delete this {0}?|
 |SC_MI000001|現在3Dビュー機能開発中です。|Tính năng view 3D đang trong quá trình phát triển|We are currently developing the 3D view function.|
@@ -55,6 +55,3 @@ language definition
 | 28 | Notification                                                     | thông báo                                                | 通知                            |               |
 | 29 | Warning                                                          | cảnh báo                                                 | 警告                            |               |
 | 30 | All                                                              | tất cả                                                   | 全て                            |               |
-📋 Copy
-Clear
-Buy Me a Coffee at ko-fi.com
