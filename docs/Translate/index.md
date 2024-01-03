@@ -2,8 +2,7 @@
 Created User : CSV Hiếu
 Created Date : 2024/01/03
 ```
-| | | | |
-|-|-|-|-|
+
 |メッセージID|メッセージ（日本語）|メッセージ（ベトナム語）|メッセージ（英語）|
 |---|---|---|
 |SC_MW000001|このシートチャートを複製しますか?|Bạn có muốn sao chép seat chart này không?|Do you want to duplicate this seat chart?|
