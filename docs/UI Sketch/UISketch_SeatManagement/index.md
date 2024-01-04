@@ -32,9 +32,9 @@
 3. Click on 【Table】 model 
      Display table setting form
 
-4.【Table setting】
-     . Choose the direction of the table
-     . Choose employee
-     . Add employee from table
-     . Delete employee from table
-     . Select seat position of employee
+4. 【Table setting】
+     - Choose the direction of the table
+     - Choose employee
+     - Add employee from table
+     - Delete employee from table
+     - Select seat position of employee

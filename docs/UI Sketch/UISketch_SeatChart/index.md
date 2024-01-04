@@ -1,11 +1,11 @@
 ## Outline
 
 ### Common:
--Displays the list of seat charts available in the system
--Switch language
+ - Displays the list of seat charts available in the system
+ - Switch language
 ### Manager:
--Edit/add/duplicate seat chart
--Delete seat chart
+ - Edit/add/duplicate seat chart
+ - Delete seat chart
 
 ## Layout
 

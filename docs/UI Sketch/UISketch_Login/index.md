@@ -1,7 +1,7 @@
 ## Outline
 
-Login with SSO 
-Redirect SSO Login page
+ - Login with SSO 
+ - Redirect SSO Login page
 
 
 ## Layout

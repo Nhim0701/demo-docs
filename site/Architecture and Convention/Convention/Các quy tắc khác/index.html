@@ -112,6 +112,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#quy-tac-quan-ly-sourcegit" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -650,6 +655,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Các quy tắc khác
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -659,6 +675,41 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quy-tac-quan-ly-sourcegit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quy tắc quản lý source/git
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-list-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check list code
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -698,6 +749,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quy-tac-quan-ly-sourcegit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quy tắc quản lý source/git
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-list-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check list code
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -713,7 +790,7 @@
 
   <h1>Các quy tắc khác</h1>
 
-<p>Quy tắc quản lý source/git</p>
+<h2 id="quy-tac-quan-ly-sourcegit">Quy tắc quản lý source/git</h2>
 <ol>
 <li>
 <p>Cách đặt tên branch</p>
@@ -723,50 +800,73 @@
 </li>
 <li>
 <p>Chú ý trước khi làm </p>
-</li>
+<ul>
 <li>chuyển trạng thái thành "In Progress", </li>
 <li>điền thời gian dự kiến làm(ước lượng không cần phải đúng 100%), </li>
 <li>ngày bắt đầu làm</li>
-<li>
-<p>có vấn đề gì comment dưới backlog</p>
+<li>có vấn đề gì comment dưới backlog</li>
+</ul>
 </li>
 <li>
 <p>Chú ý làm xong</p>
-</li>
+<ul>
 <li>Làm xong tạo pullrequest qua develop</li>
+</ul>
+</li>
 </ol>
-<p>Check list code</p>
+<h2 id="check-list-code">Check list code</h2>
+<ol>
+<li>
+<p>Setting</p>
 <ul>
 <li>Cài đặt bắt buộc Eslint và Prettier</li>
 <li>Setup VS Code: auto format on save, Tabsize 2 space</li>
 <li>Các hàm dùng chung thì phải có tính Global. Có nghĩa là có thể dùng ở nhiều nơi, nhiều trường hợp mà không cần thay đổi quá nhiều.</li>
 <li>Khi viết hàm chung cần thảo luận với Leader trước khi làm hoặc đã được cho phép từ trước</li>
-<li>Front-end</li>
+</ul>
+</li>
+<li>
+<p>Front-end</p>
+<ul>
 <li>Template dùng pug template </li>
 <li>Style dùng SASS</li>
 <li>KHÔNG DÙNG JQUERY.</li>
 <li>KHÔNG DÙNG v-html.</li>
-<li>*** Syntax vue ver_3 không dùng syntax vue ver_2</li>
+<li>Syntax vue ver_3 không dùng syntax vue ver_2</li>
 <li>File style(sass) tạo ra 1 file riêng và import ở file .vue và PHẢI DÙNG scoped </li>
-<li>Back-end</li>
+</ul>
+</li>
+<li>
+<p>Back-end</p>
+<ul>
 <li>Các function response đều phải viết Document API </li>
-<li>
-<p>SQL dùng theo syntax thư viện gorm HẠN CHẾ DÙNG sql raw</p>
+<li>SQL dùng theo syntax thư viện gorm HẠN CHẾ DÙNG sql raw</li>
+</ul>
 </li>
 <li>
-<p>Mỗi module sẽ có language riêng, menu riêng, css riêng. Những phần nào dùng chung cho nhiều module mới viết thư mục bên ngoài cùng.
-4***. Khi add 1 package mới hoặc update package hoặc add vendor mới cần xác nhận với leader trước không được tự ý thao tác nếu không rõ.</p>
+<p>Mỗi module sẽ có language riêng, menu riêng, css riêng. Những phần nào dùng chung cho nhiều module mới viết thư mục bên ngoài cùng.</p>
 </li>
-<li>Đặt tên hàm, tên biến </li>
-<li>Back-end: </li>
+<li>
+<p>Khi add 1 package mới hoặc update package hoặc add vendor mới cần xác nhận với leader trước không được tự ý thao tác nếu không rõ.</p>
+</li>
+<li>
+<p>Đặt tên hàm, tên biến </p>
+<ul>
+<li>Back-end: <ul>
 <li>Tên hàm chữ đầu viết hoa và theo quy tắc camelCase. VD: GetUser, GetUserById, ...</li>
 <li>Tên biến đặt theo quy tắc camelCase. Chữ đầu có không cần viết hoa.</li>
 <li>Các function dùng nội bộ trong 1 file thì theo quy định có dấu underscore ở đầu. VD: _HandleData, ...</li>
-<li>Front-end</li>
+</ul>
+</li>
+<li>Front-end<ul>
 <li>Cả hàm và biến cần định nghĩa type rõ ràng. Hạn chế dùng ANY.</li>
 <li>Tên hàm theo quy tắc camelCase. VD: handleData, ...</li>
 <li>Tên biến: có thể underscore hoặc camelCase.</li>
 </ul>
+</li>
+</ul>
+</li>
+</ol>
 
 
 
