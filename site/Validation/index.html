@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="../Architecture%20and%20Convention/Convention/C%C3%A1c%20quy%20t%E1%BA%AFc%20kh%C3%A1c/">
+      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -16,7 +18,7 @@
     
     
       
-        <title>API一覧 - SeatChartDocs</title>
+        <title>Validation - SeatChartDocs</title>
       
     
     
@@ -111,7 +113,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#api" class="md-skip">
+        <a href="#use-marshmallow-library-to-validate" class="md-skip">
           Skip to content
         </a>
       
@@ -147,7 +149,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API一覧
+              Validation
             
           </span>
         </div>
@@ -675,10 +677,28 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Validation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Validation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -687,6 +707,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#use-marshmallow-library-to-validate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use marshmallow library to validate
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -708,8 +755,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -718,44 +763,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#api-list" class="md-nav__link">
+  <a href="#use-marshmallow-library-to-validate" class="md-nav__link">
     <span class="md-ellipsis">
-      API List
+      Use marshmallow library to validate
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#status-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Status code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#header-setting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Header setting
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Header setting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#this-section-will-be-added-to-all-api-request-headers" class="md-nav__link">
-    <span class="md-ellipsis">
-      This section will be added to all API request headers
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -774,187 +786,63 @@
                   
 
 
-<h1 id="api">API一覧</h1>
-<h2 id="api-list">API List</h2>
-<table>
-<thead>
-<tr>
-<th>No.</th>
-<th>API function no.</th>
-<th>Method</th>
-<th>API name</th>
-<th>Functional overview</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>CSC-001</td>
-<td>Get</td>
-<td>userinfo</td>
-<td>lấy thông tin của user</td>
-</tr>
-<tr>
-<td>1</td>
-<td>CSC-002</td>
-<td>Get</td>
-<td>permission</td>
-<td>Lấy permission của user</td>
-</tr>
-<tr>
-<td>2</td>
-<td>CSC-003</td>
-<td>Get</td>
-<td>listSeatChartName</td>
-<td>lấy tên của toàn bộ chart có trong hệ thống</td>
-</tr>
-<tr>
-<td>3</td>
-<td>CSC-004</td>
-<td>Get</td>
-<td>seatChart2DDetail</td>
-<td>hiển thị toàn bộ model tương ứng với chart được chọn</td>
-</tr>
-<tr>
-<td>4</td>
-<td>CSC-005</td>
-<td>Get</td>
-<td>listEmployee</td>
-<td>hiển thị toàn bộ nhân viên</td>
-</tr>
-<tr>
-<td>5</td>
-<td>CSC-006</td>
-<td>Post</td>
-<td>addSeatChart</td>
-<td>thêm seat chart vào hệ thống</td>
-</tr>
-<tr>
-<td>6</td>
-<td>CSC-007</td>
-<td>Put</td>
-<td>upadteSeatChart</td>
-<td>sửa đổi thông tin seat chart</td>
-</tr>
-<tr>
-<td>7</td>
-<td>CSC-008</td>
-<td>Delete</td>
-<td>deleteSeatChart</td>
-<td>xóa seat chart khỏi hệ thống</td>
-</tr>
-<tr>
-<td>8</td>
-<td>CSC-009</td>
-<td>Post</td>
-<td>addModel</td>
-<td>thêm model vào seat chart đang chọn</td>
-</tr>
-<tr>
-<td>9</td>
-<td>CSC-010</td>
-<td>Put</td>
-<td>updateModel</td>
-<td>thay đổi thông tin model trong seat chart</td>
-</tr>
-<tr>
-<td>10</td>
-<td>CSC-011</td>
-<td>Delete</td>
-<td>deleteModel</td>
-<td>xóa model khỏi seat chart</td>
-</tr>
-</tbody>
-</table>
-<h2 id="status-code">Status code</h2>
-<p>It will return the code below.</p>
-<table>
-<thead>
-<tr>
-<th>Status code</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200</td>
-<td>Request successful</td>
-</tr>
-<tr>
-<td>201</td>
-<td>Successful registration</td>
-</tr>
-<tr>
-<td>204</td>
-<td>The request was successful, but the body to be returned does not exist.</td>
-</tr>
-<tr>
-<td>400</td>
-<td>Specifying invalid request parameters</td>
-</tr>
-<tr>
-<td>401</td>
-<td>API access token is invalid or permissions are invalid</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Access non-existent URL</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Request limit exceeded</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Unknown error</td>
-</tr>
-</tbody>
-</table>
-<h2 id="header-setting">Header setting</h2>
-<h3 id="this-section-will-be-added-to-all-api-request-headers">This section will be added to all API request headers</h3>
-<table>
-<thead>
-<tr>
-<th>JSON Key</th>
-<th>Type</th>
-<th>Size</th>
-<th>Required</th>
-<th>encryption</th>
-<th>Value description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>X-Auth-Type</td>
-<td>String</td>
-<td></td>
-<td>○</td>
-<td></td>
-<td>sso</td>
-</tr>
-<tr>
-<td>X-Csv-Key</td>
-<td>String</td>
-<td></td>
-<td>○</td>
-<td>＊</td>
-<td></td>
-</tr>
-<tr>
-<td>X-Csv-Token</td>
-<td>String</td>
-<td></td>
-<td>○</td>
-<td>＊</td>
-<td>Bearer</td>
-</tr>
-</tbody>
-</table>
-<p>Example:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>X-Auth-Type:sso
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>X-Csv-Key:8e31b3553533e085da38702a5a8f220c
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>X-Csv-Token:Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJCY1RsRld4NjRhWlZ2eFZDa1VsblphYnd3NHU0SzFMZXlrTF9UWmVTSVYwIn0.eyJleHAiOjE3MDIwNDUyMDcsImlhdCI6MTcwMjAxNjQwNywiYXV0aF90aW1lIjoxNzAyMDE2NDA3LCJqdGkiOiI5NjUwZjdkNS1hMTVmLTRlNGEtOTM2OC02YjAzNjFjYjE1MWYiLCJpc3MiOiJodHRwczovL3Nzby5jdWJldm4tc2VydmljZS5jb20vcmVhbG1zL2NzdiIsImF1ZCI6WyJ1cm46YW1hem9uOndlYnNlcnZpY2VzIiwiZGV2b3BzLXBvcnRhbCIsImFjY291bnQiXSwic3ViIjoiYzJjNTY2M2UtNTkwNy00NTMyLWI1YWYtN2YyYmRiZTc1ZTliIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiY2Jvb2siLCJub25jZSI6IjJkNDFjNzk1LWJhNTEtNDg4Ny1hMWNkLTE3MjA2NDI3NzMzYSIsInNlc3Npb25fc3RhdGUiOiIxZjUxN2Y2ZC0yYmRiLTQyZjktOGQ4NS0xZDIzZGNhOThiODUiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1hd3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7InVybjphbWF6b246d2Vic2VydmljZXMiOnsicm9sZXMiOlsiYXJuOmF3czppYW06OjcwMjA5NzY2OTk5ODpyb2xlL2FkbWluaXN0cmF0b3IsYXJuOmF3czppYW06OjcwMjA5NzY2OTk5ODpzYW1sLXByb3ZpZGVyL2Nzdi1zc28iXX0sImRldm9wcy1wb3J0YWwiOnsicm9sZXMiOlsiZnVsbGFjY2VzcyJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJvcGVuaWQgZW1haWwgY3N2LWNsaWVudC1zY29wZSIsInNpZCI6IjFmNTE3ZjZkLTJiZGItNDJmOS04ZDg1LTFkMjNkY2E5OGI4NSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJsZGFwX2lkIjoiNTUyODYzMWYtZjBiNy00YTcyLTk4ZTEtNTIxNGZjNTk2MTIzIiwibmFtZSI6Ik5HVVlFTiBUUk9ORyBISUVVIiwiZW1wbG95ZWVJRCI6IjE2MjkiLCJnaXZlbl9uYW1lIjoiSElFVSIsImZhbWlseV9uYW1lIjoiTkdVWUVOIFRST05HIiwibGRhcF91c2VybmFtZSI6ImhpZXUubnQiLCJlbWFpbCI6ImhpZXUubnRAdm4tY3ViZXN5c3RlbS5jb20iLCJ1c2VybmFtZSI6IjE2MjkifQ.cDTNER3fH6hTN3Exw0gCAovA7P7GyqSvOF2RZO5MUdKM6BOoz6HFTjOo8c1uekoIQHnsf154YawUmEpZgxWcjxgf9fi5g1NyeCQYuy8UyGXvYZ_eHKyk42Su-jXjmxl8TZs03kZ0B8PcsOt-9IR7iIECTsMDACAtAr3y9MGIt6ghzy5ROLdV7zIcmdGgjcV8b6BDArqIiL83BtAGnW8hMcjFdYPLcDq1EOJtX0il6WBk4Q33b5-200HwufljatUU2PxXRYNSCegypxj-1q7tVQ6ABE8xafhSMnDwj3URZVxeQd0Kxk5WyG6rupIma4DOoecif08ixeh0AJ2s89veGnObPaBJw4pvzlflLzoO0ZJ0IkPApYhBPB0mfMJE1worsimurHiPEjaAWX69_FYW11UXDeacxAbdXa-zTkVTDuP30SULj-2QZat833BkjM_oUEbaQd3fUjNWsx2vGNQl-LaE3fIHkROx2VKIgF9A-iIj1dfzUJgHL4UzxhzjYk0PA9CYLibmrULZ8GHCSH7ooqXCCChkE29w8mNH-wvTNJ5kyDSwTVifYpyHmBfJZBNZi8pOZwfo2WS7bzNBFnTYVflPmP2KRMHfsAbOLyNT1Rs4bOqfGZPXBMQCexG9ws9v3L5fQ0NjHupPM2mHT1cNfmwgF048yXF1pP4HMUpYS1k
+  <h1>Validation</h1>
+
+<h2 id="use-marshmallow-library-to-validate">Use marshmallow library to validate</h2>
+<ol>
+<li>Install the library: pip install marshmallow</li>
+<li>Import marshmallow library
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    from marshmallow import Schema, fields, ValidationError, validate
+</span></code></pre></div></li>
+<li>Khởi tạo Schema 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>   class RequestSchema(Schema):
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    name = fields.Str(
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        required=True,
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        validate=[
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>            validate.Length(min=2, max=20,
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>                               error=&quot;The Name of seatchart must have between {min} and {max} characters.&quot;),
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>            validate.Regexp(r&quot;^(?!\s*$).+&quot;,
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>                               error=&quot;The Name can&#39;t be empty string!&quot;)
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        ]
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    )
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    is_clone = fields.Boolean(
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        required=True
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    )
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    info = fields.Str(
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        required=False,
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>        allow_none=True
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    )
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    type = fields.Int(
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>        required=False,
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        validate=validate.OneOf([1,2])
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    )
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    layout = fields.Int(
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>        required=False,
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>        validate=validate.OneOf([1,2])
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>    )
+</span></code></pre></div></li>
+<li>
+<p>properties:</p>
+<ul>
+<li>page = fields.Int(): Defines the data type (Str, Boolean,…)</li>
+<li>required=True (or False): Constraint settings</li>
+<li>allow_none=True (or False): allowed Null or not</li>
+<li>validate: https://marshmallow.readthedocs.io/en/stable/quickstart.html#validation</li>
+</ul>
+</li>
+<li>
+<p>Perform validation
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    body = json.loads(event[&#39;body&#39;])
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    RequestSchema().load(body)
 </span></code></pre></div></p>
+</li>
+<li>
+<p>Validate except
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>    except ValidationError as validErr:
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>        response = validErr.messages
+</span></code></pre></div></p>
+</li>
+</ol>
 
 
 
