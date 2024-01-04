@@ -114,6 +114,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#outline" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -465,6 +470,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    UISketch_SeatManagement
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -474,6 +490,74 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#outline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirement-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirement Definition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Requirement Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#item-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Item Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operation-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operation Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -698,6 +782,65 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#outline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirement-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirement Definition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Requirement Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#item-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Item Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operation-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operation Description
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -713,7 +856,69 @@
 
   <h1>UISketch_SeatManagement</h1>
 
-
+<h2 id="outline">Outline</h2>
+<ul>
+<li>Add/edit/delete model from seat chart</li>
+<li>Arrange the position of tables and seat</li>
+<li>Add member to the seat</li>
+</ul>
+<h2 id="layout">Layout</h2>
+<p><img alt="SeatChart" src="../../Files/Img/SeatManagement1.png" /></p>
+<p><img alt="SeatChart" src="../../Files/Img/SeatManagement2.png" /></p>
+<h2 id="requirement-definition">Requirement Definition</h2>
+<h3 id="item-definition">Item Definition</h3>
+<table>
+<thead>
+<tr>
+<th>No.</th>
+<th>Item Name</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Office name</td>
+<td>Display office name, can rename</td>
+</tr>
+<tr>
+<td>2</td>
+<td>List model</td>
+<td>Display list model, can drag and drop model to chart</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Table</td>
+<td>Click table to open table setting</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Table setting</td>
+<td>Setting member position sitting on that table, table direction</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operation-description">Operation Description</h3>
+<ol>
+<li>
+<p>Initial Display
+     Display information of seat chart</p>
+</li>
+<li>
+<p>Click on 【Model】 
+    Drag and drop model to chart</p>
+</li>
+<li>
+<p>Click on 【Table】 model 
+     Display table setting form</p>
+</li>
+</ol>
+<p>4.【Table setting】
+     . Choose the direction of the table
+     . Choose employee
+     . Add employee from table
+     . Delete employee from table
+     . Select seat position of employee</p>
 
 
 
