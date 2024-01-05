@@ -32,11 +32,7 @@
  - Các function response đều phải viết Document API 
  - SQL dùng theo syntax thư viện gorm HẠN CHẾ DÙNG sql raw
 
-### 4. Mỗi module sẽ có language riêng, menu riêng, css riêng. Những phần nào dùng chung cho nhiều module mới viết thư mục bên ngoài cùng.
-
-### 5. Khi add 1 package mới hoặc update package hoặc add vendor mới cần xác nhận với leader trước không được tự ý thao tác nếu không rõ.
-
-### 6. Đặt tên hàm, tên biến 
+### 4. Đặt tên hàm, tên biến 
  - Back-end: 
     - Tên hàm chữ đầu viết hoa và theo quy tắc camelCase. VD: GetUser, GetUserById, ...
     - Tên biến đặt theo quy tắc camelCase. Chữ đầu có không cần viết hoa.
@@ -45,3 +41,7 @@
     - Cả hàm và biến cần định nghĩa type rõ ràng. Hạn chế dùng ANY.
     - Tên hàm theo quy tắc camelCase. VD: handleData, ...
     - Tên biến: có thể underscore hoặc camelCase.
+
+### 5.Others
+ - Mỗi module sẽ có language riêng, menu riêng, css riêng. Những phần nào dùng chung cho nhiều module mới viết thư mục bên ngoài cùng.
+ - Khi add 1 package mới hoặc update package hoặc add vendor mới cần xác nhận với leader trước không được tự ý thao tác nếu không rõ.
