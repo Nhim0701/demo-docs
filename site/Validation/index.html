@@ -728,6 +728,66 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Use marshmallow library to validate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-install-the-library-pip-install-marshmallow" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Install the library: pip install marshmallow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-import-marshmallow-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Import marshmallow library
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-khoi-tao-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.  Khởi tạo Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. properties:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-perform-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Perform validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-validate-except" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Validate except
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -769,6 +829,66 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Use marshmallow library to validate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-install-the-library-pip-install-marshmallow" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Install the library: pip install marshmallow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-import-marshmallow-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Import marshmallow library
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-khoi-tao-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.  Khởi tạo Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. properties:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-perform-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Perform validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-validate-except" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Validate except
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -789,12 +909,11 @@
   <h1>Validation</h1>
 
 <h2 id="use-marshmallow-library-to-validate">Use marshmallow library to validate</h2>
-<ol>
-<li>Install the library: pip install marshmallow</li>
-<li>Import marshmallow library
+<h3 id="1-install-the-library-pip-install-marshmallow">1. Install the library: pip install marshmallow</h3>
+<h3 id="2-import-marshmallow-library">2. Import marshmallow library</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    from marshmallow import Schema, fields, ValidationError, validate
-</span></code></pre></div></li>
-<li>Khởi tạo Schema 
+</span></code></pre></div>
+<h3 id="3-khoi-tao-schema">3.  Khởi tạo Schema</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>   class RequestSchema(Schema):
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    name = fields.Str(
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        required=True,
@@ -820,29 +939,21 @@
 </span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>        required=False,
 </span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>        validate=validate.OneOf([1,2])
 </span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>    )
-</span></code></pre></div></li>
-<li>
-<p>properties:</p>
-<ul>
-<li>page = fields.Int(): Defines the data type (Str, Boolean,…)</li>
-<li>required=True (or False): Constraint settings</li>
-<li>allow_none=True (or False): allowed Null or not</li>
-<li>validate: https://marshmallow.readthedocs.io/en/stable/quickstart.html#validation</li>
-</ul>
-</li>
-<li>
-<p>Perform validation
+</span></code></pre></div>
+<h3 id="4-properties">4. properties:</h3>
+<div class="language-text highlight"><pre><span></span><code>- page = fields.Int(): Defines the data type (Str, Boolean,…)
+- required=True (or False): Constraint settings
+- allow_none=True (or False): allowed Null or not
+- validate: https://marshmallow.readthedocs.io/en/stable/quickstart.html#validation
+</code></pre></div>
+<h3 id="5-perform-validation">5. Perform validation</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    body = json.loads(event[&#39;body&#39;])
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    RequestSchema().load(body)
-</span></code></pre></div></p>
-</li>
-<li>
-<p>Validate except
+</span></code></pre></div>
+<h3 id="6-validate-except">6. Validate except</h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>    except ValidationError as validErr:
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>        response = validErr.messages
-</span></code></pre></div></p>
-</li>
-</ol>
+</span></code></pre></div>
 
 
 

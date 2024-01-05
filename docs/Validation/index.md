@@ -1,11 +1,10 @@
 ## Use marshmallow library to validate
-
-1. Install the library: pip install marshmallow
-2. Import marshmallow library
+### 1. Install the library: pip install marshmallow
+### 2. Import marshmallow library
 ```
     from marshmallow import Schema, fields, ValidationError, validate
 ```
-3.	Khởi tạo Schema 
+### 3.	Khởi tạo Schema 
 ```
    class RequestSchema(Schema):
     name = fields.Str(
@@ -34,20 +33,20 @@
     )
  
 ```
-4. properties:
+### 4. properties:
     - page = fields.Int(): Defines the data type (Str, Boolean,…)
     - required=True (or False): Constraint settings
     - allow_none=True (or False): allowed Null or not
     - validate: https://marshmallow.readthedocs.io/en/stable/quickstart.html#validation
 
-5. Perform validation
+### 5. Perform validation
 ```
     body = json.loads(event['body'])
     RequestSchema().load(body)
 
 ```
 
-6. Validate except
+### 6. Validate except
 ```
     except ValidationError as validErr:
         response = validErr.messages
