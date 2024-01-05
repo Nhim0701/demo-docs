@@ -934,49 +934,57 @@
 
 <h2 id="quy-tac-font-end">Quy tắc Font-End</h2>
 <h3 id="1-vs-code">1. VS code</h3>
-<div class="language-text highlight"><pre><span></span><code> - Cài đặt eslint
- - Cài đặt &quot;Prettier - Code formatter&quot; và bật auto format
- - Tabspace 4
- - Bật xóa space ở cuối &quot;Trim Auto Whitespace&quot;
-</code></pre></div>
+<ul>
+<li>Cài đặt eslint<ul>
+<li>Cài đặt "Prettier - Code formatter" và bật auto format</li>
+<li>Tabspace 4</li>
+<li>Bật xóa space ở cuối "Trim Auto Whitespace"</li>
+</ul>
+</li>
+</ul>
 <h3 id="2-naming-convention">2. Naming Convention</h3>
-<div class="language-text highlight"><pre><span></span><code>  * Functions and Method
-
-      `Tên hàm và phương thức viết theo dạng &quot;camelCase&quot;`
-
-  * Constants
-
-      `Tên biến constant viết theo dạng &quot;SNAKE_UPPER_CASE&quot;`
-
-  * Variables:
-
-      `Tên biến, hàm viết theo dạng &quot;camelCase&quot;`
-
-      `Tên class (css, scss) viết theo dạng &quot;kebab-case&quot;`
-
-      `Tên biến language theo dạng &quot;snake_case&quot;`
-</code></pre></div>
+<ul>
+<li>Functions and Method    <ul>
+<li>Tên hàm và phương thức viết theo dạng "camelCase"</li>
+</ul>
+</li>
+<li>Constants<ul>
+<li>Tên biến constant viết theo dạng "SNAKE_UPPER_CASE"</li>
+</ul>
+</li>
+<li>Variables:<ul>
+<li>Tên biến, hàm viết theo dạng "camelCase"</li>
+<li>Tên class (css, scss) viết theo dạng "kebab-case"</li>
+<li>Tên biến language theo dạng "snake_case"</li>
+</ul>
+</li>
+</ul>
 <h3 id="3-assets">3. Assets</h3>
-<div class="language-text highlight"><pre><span></span><code>  - icon sử dụng svg/png
-  - css sử dụng scss
-</code></pre></div>
+<ul>
+<li>icon sử dụng svg/png</li>
+<li>css sử dụng scss</li>
+</ul>
 <h3 id="4-form-validate">4. Form validate</h3>
-<div class="language-text highlight"><pre><span></span><code>  - validate các input, select trước khi request API (các trường có ràng buộc đặc thù, tồn tại, rỗng).
-</code></pre></div>
+<ul>
+<li>validate các input, select trước khi request API (các trường có ràng buộc đặc thù, tồn tại, rỗng).</li>
+</ul>
 <h3 id="5-language">5. Language</h3>
-<div class="language-text highlight"><pre><span></span><code>  -  Nếu label là mã lỗi hoặc sử dụng nhiều lần thì định nghĩa trong locales/*.ts 
--  Nếu dùng chỉ trong page thì định nghĩa local trong file vue luôn
-</code></pre></div>
+<ul>
+<li>Nếu label là mã lỗi hoặc sử dụng nhiều lần thì định nghĩa trong locales/*.ts </li>
+<li>Nếu dùng chỉ trong page thì định nghĩa local trong file vue luôn</li>
+</ul>
 <h3 id="6-code">6. Code</h3>
-<div class="language-text highlight"><pre><span></span><code>  - Flow logic code xử lý &gt; 5 dòng code nên tách ra 1 hàm riêng
-  - Mỗi chức năng (Flow logic code xử lý) nên được viết hàm mới riêng biệt (tránh 1 hàm có nhiều logic code khó kiểm soát)
-  - style ở các component nên thêm &quot;scoped&quot; vào để phạm vi sử dụng chỉ ở component đó (local styles)
-  - router sử dụng Lazy loading routers (khi chuyển trang không load lại toàn bộ js, mà chỉ load các nội dung js cần thiết)
-</code></pre></div>
+<ul>
+<li>Flow logic code xử lý &gt; 5 dòng code nên tách ra 1 hàm riêng</li>
+<li>Mỗi chức năng (Flow logic code xử lý) nên được viết hàm mới riêng biệt (tránh 1 hàm có nhiều logic code khó kiểm soát)</li>
+<li>style ở các component nên thêm "scoped" vào để phạm vi sử dụng chỉ ở component đó (local styles)</li>
+<li>router sử dụng Lazy loading routers (khi chuyển trang không load lại toàn bộ js, mà chỉ load các nội dung js cần thiết)</li>
+</ul>
 <h3 id="7-tham-khao">7. Tham khảo</h3>
-<div class="language-text highlight"><pre><span></span><code>  - Style scoped: https://vuejs.org/api/sfc-css-features.html#scoped-css
-  - Lazy loading router: https://vueschool.io/lessons/lazy-loading-routes-vue-cli-only?friend=vuerouter
-</code></pre></div>
+<ul>
+<li>Style scoped: https://vuejs.org/api/sfc-css-features.html#scoped-css</li>
+<li>Lazy loading router: https://vueschool.io/lessons/lazy-loading-routes-vue-cli-only?friend=vuerouter</li>
+</ul>
 
 
 

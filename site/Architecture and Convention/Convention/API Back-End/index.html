@@ -916,55 +916,54 @@
 
 <h2 id="qui-tac-api-rest-api">Qui tắc API (REST API):</h2>
 <h3 id="1-methods">1. Methods:</h3>
-<div class="language-text highlight"><pre><span></span><code> - GET: Trả về một Resource hoặc một danh sách Resource.
- - POST: Tạo mới một Resource.
- - PUT: Cập nhật thông tin cho Resource.
- - DELETE: Xoá một Resource.
-</code></pre></div>
+<ul>
+<li>GET: Trả về một Resource hoặc một danh sách Resource.</li>
+<li>POST: Tạo mới một Resource.</li>
+<li>PUT: Cập nhật thông tin cho Resource.</li>
+<li>DELETE: Xoá một Resource.</li>
+</ul>
 <h3 id="2-headers">2. Headers:</h3>
-<div class="language-text highlight"><pre><span></span><code>- Authorization: Bearer + {token string}
-- timestamp: {timestamp} Ex: 1702535201
-- Content-Type: application/json
-</code></pre></div>
+<ul>
+<li>Authorization: Bearer + {token string}</li>
+<li>timestamp: {timestamp} Ex: 1702535201</li>
+<li>Content-Type: application/json</li>
+</ul>
 <h3 id="3-status">3. Status:</h3>
-<div class="language-text highlight"><pre><span></span><code> - 200 OK – Trả về thành công cho những phương thức GET, POST, PUT hoặc DELETE.
- - 400 Bad Request – Request không hợp lệ
- - 401 Unauthorized – Request cần có xác thực.
- - 404 Not Found – Không tìm thấy resource từ URI
- - 429 Too Many Requests – Request bị từ chối do bị giới hạn
-</code></pre></div>
+<ul>
+<li>200 OK – Trả về thành công cho những phương thức GET, POST, PUT hoặc DELETE.</li>
+<li>400 Bad Request – Request không hợp lệ</li>
+<li>401 Unauthorized – Request cần có xác thực.</li>
+<li>404 Not Found – Không tìm thấy resource từ URI</li>
+<li>429 Too Many Requests – Request bị từ chối do bị giới hạn</li>
+</ul>
 <h3 id="4-url-api-convention">4. URL API Convention</h3>
-<div class="language-text highlight"><pre><span></span><code>- Sử dụng Method Request để nói lên nhiệm vụ, không cần thêm các động từ create, get, update, delete nữa
-- Resource name sẽ ở dạng số nhiều (posts, categories,...)
-- Url đều là chữ viết thường (lowercase), sử dụng dấu &quot;-&quot; thay vì dấu &quot;_&quot;
-</code></pre></div>
+<ul>
+<li>Sử dụng Method Request để nói lên nhiệm vụ, không cần thêm các động từ create, get, update, delete nữa</li>
+<li>Resource name sẽ ở dạng số nhiều (posts, categories,...)</li>
+<li>Url đều là chữ viết thường (lowercase), sử dụng dấu "-" thay vì dấu "_"</li>
+</ul>
 <h3 id="5-naming-convention">5. Naming Convention</h3>
 <ul>
-<li>
-<p>Functions and Method</p>
-<ul>
+<li>Functions and Method<ul>
 <li>Tên hàm và phương thức viết theo dạng "camelCase"</li>
 </ul>
 </li>
-<li>
-<p>Constants</p>
-<ul>
+<li>Constants<ul>
 <li>Tên biến constant viết theo dạng "SNAKE_UPPER_CASE"</li>
 <li>Định nghĩa trong layer</li>
 </ul>
 </li>
-<li>
-<p>Variables</p>
-<ul>
+<li>Variables<ul>
 <li>Tên biến viết theo dạng "camelCase"</li>
 </ul>
 </li>
 </ul>
 <h3 id="6-code">6. Code</h3>
-<div class="language-text highlight"><pre><span></span><code>- Các hàm/ variable common viết/ định nghĩa trong layer
-- Validate các param từ request (Các trường có ràng buộc đặc thù, tồn tại, rỗng)
-- Mỗi chức năng (Flow logic code xử lý) nên được viết 1 lambda
-</code></pre></div>
+<ul>
+<li>Các hàm/ variable common viết/ định nghĩa trong layer</li>
+<li>Validate các param từ request (Các trường có ràng buộc đặc thù, tồn tại, rỗng)</li>
+<li>Mỗi chức năng (Flow logic code xử lý) nên được viết 1 lambda </li>
+</ul>
 
 
 
