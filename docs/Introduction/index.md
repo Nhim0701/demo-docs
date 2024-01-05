@@ -6,3 +6,5 @@ With the traditional method, it is not possible to produce many manuscripts at t
 
 For a large-scale company or an event that requires meticulous seating, arrangement and an overview are essential.
 The Seat Chart system was born as an inevitable need for current scale expansion.
+
+:fontawesome-regular-face-laugh-wink:
