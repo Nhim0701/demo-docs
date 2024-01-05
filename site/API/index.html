@@ -911,7 +911,7 @@
 <h2 id="csc0004_listseatchartname">CSC0004_listSeatChartName</h2>
 <ul>
 <li>GET <code>/CSC0004/listSeatChartName</code></li>
-<li>Return list of seat chart.</li>
+<li>Parameter : <code>type</code> (optional)</li>
 <li>Example return data
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    &quot;status&quot;: true,
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    &quot;message&quot;: &quot;get data succes&quot;,
@@ -929,7 +929,7 @@
 <li>Optional query parameters:</li>
 <li><code>type</code> : this version only have 2 type 1 or 2. that why if input another interger value will return <code>list :null</code></li>
 <li>Validation check:</li>
-<li>if <code>input</code> is not a number will return error with status code <code>400</code>:
+<li>if input is not a number will return error with status code <code>400</code>:
  <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>   {
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>   &quot;type&quot;: [
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>       &quot;Not a valid integer.&quot;
@@ -940,8 +940,7 @@
 <h2 id="csc0002_seatchart2ddetail">CSC0002_seatChart2DDetail</h2>
 <ul>
 <li>GET <code>/CSC0002/seatChart2DDetail</code> </li>
-<li>Retrieve detailed information about a seat chart.</li>
-<li>Require input param : <code>seat_chart_id</code> must be a number </li>
+<li>Parameter : <code>seat_chart_id</code> must be a number (required)</li>
 <li>Example return data for input <code>seat_chart_id</code> = 331:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    {
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    &quot;status&quot;: true,
@@ -961,6 +960,7 @@
 </span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    &quot;url_getfile&quot;: &quot;https://seat-chart.s3.amazonaws.com/available/TSA_331.svg?AWSAccessKeyId=ASIA2G6CIH5XD2JFH573&amp;Signature=GOj4sgmV4on7Lzmt%2BGt7xaPnBxk%3D&amp;x-amz-security-token=IQoJb3JpZ2luX2VjEO%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLXNvdXRoZWFzdC0xIkYwRAIgJ7pU4DANceN5i6WbEOBKDx1CgeaPWo8i%2F4Yuci3%2FRUUCIFoyAI96stinM4Yf6vDIzeblc0GMFoyMP3Yp5UOQAjEuKqkDCIj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQAxoMNzAyMDk3NjY5OTk4IgzU5BQlt8sm5wAy35wq%2FQKMoRoATjSmvm4C9rDxbtZaMG6wDSRWuyuKSEJvXuFas5%2FRnufRDDb7hjUY74g3W0BFJ%2FEeBs7KrFXGyH%2FIkA9c0XBxmnAG%2F1Co3IHcp8jvWazChqfQWeOHpqFv74dlNIPbc4957xYx9BTd3MucA1p5SCnu%2BJdTWb5mF9mfIOuRpge5sWHUzEocovUPWZft%2FOmOA%2BaLfJcnyos%2FGU8%2B7aRgxeC%2BKREq40Gr93PvMWozjhELOKjzbIaoZWnkBlmzVnhFrq0K8DrtZXTrmGl1SNscDzE84KDcc8ZLBu0A0mG61MGrirXj8hQe4AS9lyZSEZw3FqN%2Ffv7%2Ftu3DWEAXkJ0G4NPGfTECWhFOMkOtBkpexeqHJD6EvnM39ldOpbXgaLDV9G8PFHAcY6bWI07BgFSEX%2BIkiA%2FH0Wg%2Bka9pCSbL7ooRrsescnMs9xPSu1Fs0C9xLNd1gPj2MxoGIRhEzOs4qc07Gwif7aKrVmQY%2FFBZ%2FzkgVJmMD%2BjUubn5rjIwh8zerAY6ngEP3ajDXu9KMKx%2BpCUCXK%2F0VvGzvsFef4rCjbIVkNuruOt8eH6GaddXHoV68SGmOlnEj4SJy%2FzUcxLDRHN%2Bu7GJYmhaV664iTm2GuA5Qs1dQ3d7yJpDwmQUKawFL%2Bq0xDbyBRAPh0nI7jdKUAvKb73lnYPvAl0FcmP6zsEwkoeWAz7CwcXX5Qm6V5Xo3cO9RicXp1M%2Be8QT%2BhKwZvAE7w%3D%3D&amp;Expires=1704440450&quot;
 </span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>}
 </span></code></pre></div></li>
+<li>This API retrieve detailed information about a seat chart.</li>
 <li>Validation check:</li>
 <li>if input is not a number will return error with status code <code>400</code>:
  <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>   {
@@ -969,13 +969,98 @@
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>       ]
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>   }
 </span></code></pre></div></li>
-<li>if <code>seat_chart_id</code> does not exist in the system will return code <code>404</code>:
- <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>   {
+<li>if <code>seat_chart_id</code> does not exist in the system will return code <code>404</code>:</li>
+</ul>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>   {
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>   &quot;status&quot;: false,
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>   &quot;message&quot;: &quot;Id: &#39;3311&#39; not found!&quot;
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>   }
-</span></code></pre></div></li>
-</ul>
+</span></code></pre></div>
+ ## CSC0003_listEmployee
+- GET <code>/CSC0003/listEmployee</code>
+- Parameter :
+    - <code>page</code> : must be a number (required)
+    - <code>number_of_page</code> : Number of members displayed on a page.Must be a number (optional)
+    - <code>keysearch</code> : search keywords (optional)
+    - <code>seatchart_id</code>: id of seat chart (optional)
+- Example return data for input <code>page</code> = 1 :
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>    {
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    &quot;number_of_page&quot;: 120,
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    &quot;total_record&quot;: 120,
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    &quot;status&quot;: true,
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    &quot;message&quot;: &quot;get data succes&quot;,
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    &quot;page&quot;: 1,
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    &quot;list&quot;: [
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>        {
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>            &quot;employee_id&quot;: &quot;0506&quot;,
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>            &quot;employee_name&quot;: &quot;PHAN TRƯỜNG THỦY&quot;,
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>            &quot;avatar&quot;: &quot;0506.png&quot;,
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>            &quot;position_id&quot;: &quot;21&quot;,
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>            &quot;position_name&quot;: &quot;Manager&quot;,
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>            &quot;department_id&quot;: &quot;19&quot;,
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>            &quot;department_name&quot;: &quot;システム開発 2部&quot;,
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>            &quot;official_date&quot;: &quot;2013-09-23&quot;,
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>            &quot;seat_chart&quot;: [
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>                {
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>                    &quot;employee_id&quot;: &quot;0506&quot;,
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>                    &quot;seat_chart_id&quot;: 331,
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>                    &quot;seat_chart_name&quot;: &quot;TSA&quot;
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>                },
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>                {
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>                    &quot;employee_id&quot;: &quot;0506&quot;,
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>                    &quot;seat_chart_id&quot;: 330,
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>                    &quot;seat_chart_name&quot;: &quot;QTSC&quot;
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>                }
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>            ]
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>        }
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>    ]
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>}
+</span></code></pre></div>
+- If we input only page API wil return all member exist in the system
+- We can see here that 120 records are returned, but I only took 1 record as an example
+- If optional items are entered, the corresponding data will be returned
+- Validation check:
+ - <code>page</code> <code>number_of_page</code> <code>seatchart_id</code> must be a number.If one of this input is not a number will return error with status code <code>400</code>: 
+ <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>   {
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>   &quot;page&quot;: [
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>       &quot;Not a valid integer.&quot;
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>       ]
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>   }
+</span></code></pre></div>
+ - If not input <code>page</code> will return error with status code <code>400</code>: 
+ <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>   {
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>   &quot;_schema&quot;: [
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>       &quot;Invalid input type.&quot;
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>       ]
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>   }
+</span></code></pre></div>
+ ## CSC0004_addSeatChart
+- POST <code>/CSC0004/addSeatChart</code>
+- Allows you to submit a new seatchart.
+- The request body needs to be in JSON format and include the following properties:
+ - <code>is_clone</code> - boolean - required (Used to determine whether you are creating a new seat chart or duplicate seat chart from another seat chart)
+ - <code>name</code> - string - required (length from 4 to 20 and must be the name of the seat chart available in the system if <code>is_clone</code>=true)
+ - <code>info</code> - String - required (not required if <code>is_clone</code>=false)
+ - <code>type</code> - integer - required (must be 1 or 2 and not required if <code>is_clone</code>=false)
+ - <code>layout</code> - integer - required (must be 1 or 2 and not required if <code>is_clone</code>=false)
+- Example
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>    {
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    &quot;is_clone&quot;: false,
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    &quot;name&quot;: &quot;test12345&quot;,
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    &quot;info&quot;: null,
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    &quot;type&quot;: 1,
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    &quot;layout&quot;: 1
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    }
+</span></code></pre></div>
+- Besides status and messenger response body will contain the <code>url_upload</code> where save seat chart <code>.svg</code> file and <code>id</code> of seat chart .
+- Validation check:
+ - If one of required field is missing will be return <code>400</code> code and messenger . Example for <code>is_clone</code> is missng:
+ <div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>   {
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>   &quot;is_clone&quot;: [
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>       &quot;Missing data for required field.&quot;
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>       ]
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>   }
+</span></code></pre></div></p>
 
 
 
