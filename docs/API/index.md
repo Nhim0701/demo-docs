@@ -82,7 +82,7 @@ Explain the API used in the project.
     "message": "Id: '3311' not found!"
     }
  ```
- ## CSC0003_listEmployee
+## CSC0003_listEmployee
 - GET `/CSC0003/listEmployee`
 - Parameter :
     - `page` : must be a number (required)
@@ -143,15 +143,16 @@ Explain the API used in the project.
         ]
     }
  ```
- ## CSC0004_addSeatChart
+## CSC0004_addSeatChart
 - POST `/CSC0004/addSeatChart`
 - Allows you to submit a new seatchart.
 - The request body needs to be in JSON format and include the following properties:
  - `is_clone` - boolean - required (Used to determine whether you are creating a new seat chart or duplicate seat chart from another seat chart)
- - `name` - string - required (length from 4 to 20 and must be the name of the seat chart available in the system if `is_clone`=true)
- - `info` - String - required (not required if `is_clone`=false)
- - `type` - integer - required (must be 1 or 2 and not required if `is_clone`=false)
- - `layout` - integer - required (must be 1 or 2 and not required if `is_clone`=false)
+  - when `is_clone`=true:
+   - `name` - string - required (length from 4 to 20 and must be the name of the seat chart available in the system )
+   - `info` - String - required (not required if `is_clone`=true)
+   - `type` - integer - required (must be 1 or 2 and not required if `is_clone`=true)
+   - `layout` - integer - required (must be 1 or 2 and not required if `is_clone`=true)
 - Example
 ```
     {
@@ -163,7 +164,7 @@ Explain the API used in the project.
     }
 ```
 - Besides status and messenger response body will contain the `url_upload` where save seat chart `.svg` file and `id` of seat chart .
-- Validation check:
+- Validation check :
  - If one of required field is missing will be return `400` code and messenger . Example for `is_clone` is missng:
  ```
     {
@@ -172,3 +173,13 @@ Explain the API used in the project.
         ]
     }
  ```
+
+ ## CSC0004_updateSeatChart
+ - PUT `/CSC0004/updateSeatChart`
+
+
+
+
+  ## CSC0004_deleteSeatChart
+ - DELETE `/CSC0004/deleteSeatChart`
+ 
