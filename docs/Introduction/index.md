@@ -8,3 +8,4 @@ For a large-scale company or an event that requires meticulous seating, arrangem
 The Seat Chart system was born as an inevitable need for current scale expansion.
 
 :fontawesome-regular-face-laugh-wink:
+:fontawesome-brands-python:
