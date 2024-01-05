@@ -772,6 +772,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#csc0004_updateseatchart" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSC0004_updateSeatChart
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csc0004_deleteseatchart" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSC0004_deleteSeatChart
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -866,6 +884,24 @@
   <a href="#csc0004_addseatchart" class="md-nav__link">
     <span class="md-ellipsis">
       CSC0004_addSeatChart
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csc0004_updateseatchart" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSC0004_updateSeatChart
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#csc0004_deleteseatchart" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSC0004_deleteSeatChart
     </span>
   </a>
   
@@ -1078,36 +1114,99 @@
 <ul>
 <li>POST <code>/CSC0004/addSeatChart</code></li>
 <li>Allows you to submit a new seatchart.</li>
-<li>The request body needs to be in JSON format and include the following properties:</li>
+<li>The request body needs to be in JSON format and include the following properties:<ul>
 <li><code>is_clone</code> - boolean - required (Used to determine whether you are creating a new seat chart or duplicate seat chart from another seat chart)</li>
-<li>when <code>is_clone</code>=true:</li>
-<li><code>name</code> - string - required (length from 4 to 20 and must be the name of the seat chart available in the system )</li>
-<li><code>info</code> - String - required (not required if <code>is_clone</code>=true)</li>
-<li><code>type</code> - integer - required (must be 1 or 2 and not required if <code>is_clone</code>=true)</li>
-<li><code>layout</code> - integer - required (must be 1 or 2 and not required if <code>is_clone</code>=true)</li>
-<li>Example
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>    {
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    &quot;is_clone&quot;: false,
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    &quot;name&quot;: &quot;test12345&quot;,
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    &quot;info&quot;: null,
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    &quot;type&quot;: 1,
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    &quot;layout&quot;: 1
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    }
+<li>when <code>is_clone</code>=true:<ul>
+<li><code>name</code> - string - required (length from 2 to 20 and must be the name of the seat chart available in the system)</li>
+</ul>
+</li>
+<li>when <code>is_clone</code>=false:<ul>
+<li><code>name</code> - string - required (length from 2 to 20 and must <strong>not</strong> be the name of the seat chart available in the system)</li>
+<li><code>info</code> - String - required </li>
+<li><code>type</code> - integer - required (must be 1 or 2)</li>
+<li><code>layout</code> - integer - required (must be 1 or 2)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Example:<ul>
+<li><code>is_clone</code>= false:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>{
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>&quot;is_clone&quot;: false,
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>&quot;name&quot;: &quot;test12345&quot;,
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>&quot;info&quot;: null,
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>&quot;type&quot;: 1,
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>&quot;layout&quot;: 1
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>}
 </span></code></pre></div></li>
-<li>Besides status and messenger response body will contain the <code>url_upload</code> where save seat chart <code>.svg</code> file and <code>id</code> of seat chart .</li>
-<li>Validation check :</li>
-<li>If one of required field is missing will be return <code>400</code> code and messenger . Example for <code>is_clone</code> is missng:
- <div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>   {
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>   &quot;is_clone&quot;: [
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>       &quot;Missing data for required field.&quot;
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>       ]
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>   }
+<li><code>is_clone</code>=true:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>&quot;is_clone&quot;: true,
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>&quot;name&quot;: &quot;QTSC&quot;,
 </span></code></pre></div></li>
 </ul>
-<p>## CSC0004_updateSeatChart
- - PUT <code>/CSC0004/updateSeatChart</code></p>
-<p>## CSC0004_deleteSeatChart
- - DELETE <code>/CSC0004/deleteSeatChart</code></p>
+</li>
+<li>Besides status and messenger response body will contain the <code>url_upload</code> where save seat chart <code>.svg</code> file and <code>id</code> of seat chart .</li>
+<li>Validation check :<ul>
+<li>If one of required field is missing will be return <code>400</code> code and messenger . Example for <code>is_clone</code> is missng:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>{
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>&quot;is_clone&quot;: [
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    &quot;Missing data for required field.&quot;
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    ]
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>}
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a> ```
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>- If `name` not enought length from 2 to 20 will return code `400` and messenger error:
+</span></code></pre></div>
+"The Name of seatchart must have between 2 and 20 characters."
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>- If `type` or `layout` is not an integer will return code `400` and messenger error for example:
+</span></code></pre></div>
+{
+"type": [
+    "Not a valid integer."
+    ]
+}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>- If `type` or `layout` is not 1 or 2 will return code `400` and messenger error for example:
+</span></code></pre></div>
+{
+"type": [
+    "Must be one of: 1, 2."
+    ]
+}
+```</li>
+</ul>
+</li>
+</ul>
+<h2 id="csc0004_updateseatchart">CSC0004_updateSeatChart</h2>
+<ul>
+<li>PUT <code>/CSC0004/updateSeatChart</code></li>
+</ul>
+<h2 id="csc0004_deleteseatchart">CSC0004_deleteSeatChart</h2>
+<ul>
+<li>DELETE <code>/CSC0004/deleteSeatChart</code></li>
+<li>Delete an existing seat chart.</li>
+<li>The request body needs to be in JSON format and include the following properties:<ul>
+<li><code>id</code> - integer - required (must be the id of the seat chart available in the system)</li>
+</ul>
+</li>
+<li>Example delete success should return like that:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>    {
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    &quot;status&quot;: true,
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    &quot;message&quot;: &quot;Delete seat chart: TSA 3 success.&quot;,
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    &quot;data&quot;: {
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>        &quot;id&quot;: &quot;361&quot;
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>        }
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>    }
+</span></code></pre></div></li>
+<li>Validation check :<ul>
+<li>If input <code>id</code> is not a integer or blank will return error :
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>{
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>&quot;id&quot;: [
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    &quot;Not a valid integer.&quot;
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    ]
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>}
+</span></code></pre></div></li>
+</ul>
+</li>
+</ul>
 
 
 

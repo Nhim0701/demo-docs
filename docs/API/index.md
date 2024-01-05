@@ -127,7 +127,7 @@ Explain the API used in the project.
 - We can see here that 120 records are returned, but I only took 1 record as an example
 - If optional items are entered, the corresponding data will be returned
 - Validation check:
- - `page` `number_of_page` `seatchart_id` must be a number.If one of this input is not a number will return error with status code `400`: 
+- `page` `number_of_page` `seatchart_id` must be a number.If one of this input is not a number will return error with status code `400`: 
  ```
     {
     "page": [
@@ -135,7 +135,7 @@ Explain the API used in the project.
         ]
     }
  ```
- - If not input `page` will return error with status code `400`: 
+- If not input `page` will return error with status code `400`: 
  ```
     {
     "_schema": [
@@ -147,14 +147,17 @@ Explain the API used in the project.
 - POST `/CSC0004/addSeatChart`
 - Allows you to submit a new seatchart.
 - The request body needs to be in JSON format and include the following properties:
- - `is_clone` - boolean - required (Used to determine whether you are creating a new seat chart or duplicate seat chart from another seat chart)
-  - when `is_clone`=true:
-   - `name` - string - required (length from 4 to 20 and must be the name of the seat chart available in the system )
-   - `info` - String - required (not required if `is_clone`=true)
-   - `type` - integer - required (must be 1 or 2 and not required if `is_clone`=true)
-   - `layout` - integer - required (must be 1 or 2 and not required if `is_clone`=true)
-- Example
-```
+    - `is_clone` - boolean - required (Used to determine whether you are creating a new seat chart or duplicate seat chart from another seat chart)
+    - when `is_clone`=true:
+        - `name` - string - required (length from 2 to 20 and must be the name of the seat chart available in the system)
+    - when `is_clone`=false:
+        - `name` - string - required (length from 2 to 20 and must **not** be the name of the seat chart available in the system)
+        - `info` - String - required 
+        - `type` - integer - required (must be 1 or 2)
+        - `layout` - integer - required (must be 1 or 2)
+- Example:
+    - `is_clone`= false:
+    ```
     {
     "is_clone": false,
     "name": "test12345",
@@ -162,24 +165,72 @@ Explain the API used in the project.
     "type": 1,
     "layout": 1
     }
-```
+    ```
+    - `is_clone`=true:
+    ```
+    "is_clone": true,
+    "name": "QTSC",
+    ```
 - Besides status and messenger response body will contain the `url_upload` where save seat chart `.svg` file and `id` of seat chart .
 - Validation check :
- - If one of required field is missing will be return `400` code and messenger . Example for `is_clone` is missng:
- ```
+    - If one of required field is missing will be return `400` code and messenger . Example for `is_clone` is missng:
+    ```
     {
     "is_clone": [
         "Missing data for required field."
         ]
     }
- ```
+     ```
+    - If `name` not enought length from 2 to 20 will return code `400` and messenger error:
+    ```
+    "The Name of seatchart must have between 2 and 20 characters."
+    ```
+    - If `type` or `layout` is not an integer will return code `400` and messenger error for example:
+    ```
+    {
+    "type": [
+        "Not a valid integer."
+        ]
+    }
+    ```
+    - If `type` or `layout` is not 1 or 2 will return code `400` and messenger error for example:
+    ```
+    {
+    "type": [
+        "Must be one of: 1, 2."
+        ]
+    }
+    ```
+    
 
- ## CSC0004_updateSeatChart
- - PUT `/CSC0004/updateSeatChart`
-
-
-
-
-  ## CSC0004_deleteSeatChart
- - DELETE `/CSC0004/deleteSeatChart`
  
+## CSC0004_updateSeatChart
+- PUT `/CSC0004/updateSeatChart`
+
+
+
+
+## CSC0004_deleteSeatChart
+- DELETE `/CSC0004/deleteSeatChart`
+- Delete an existing seat chart.
+- The request body needs to be in JSON format and include the following properties:
+    - `id` - integer - required (must be the id of the seat chart available in the system)
+- Example delete success should return like that:
+```
+    {
+    "status": true,
+    "message": "Delete seat chart: TSA 3 success.",
+    "data": {
+        "id": "361"
+        }
+    }
+```
+- Validation check :
+    - If input `id` is not a integer or blank will return error :
+    ```
+    {
+    "id": [
+        "Not a valid integer."
+        ]
+    }
+    ```
