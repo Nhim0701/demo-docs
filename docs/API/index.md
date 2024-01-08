@@ -190,7 +190,7 @@ Explain the API used in the project.
         "Missing data for required field."
         ]
     }
-     ```
+    ```
     - If `name` not enought length from 2 to 20 will return code `400` and messenger error:
     ```
     "The Name of seatchart must have between 2 and 20 characters."
