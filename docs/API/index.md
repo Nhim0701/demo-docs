@@ -155,7 +155,7 @@ Explain the API used in the project.
         - `info` - String - required 
         - `type` - integer - required (must be 1 or 2)
         - `layout` - integer - required (must be 1 or 2)
-- Example:
+- Example input data:
     - `is_clone`= false:
     ```
     {
@@ -171,7 +171,17 @@ Explain the API used in the project.
     "is_clone": true,
     "name": "QTSC",
     ```
-- Besides status and messenger response body will contain the `url_upload` where save seat chart `.svg` file and `id` of seat chart .
+- Example create success should return like that :
+```
+{
+    "status": true,
+    "message": "Create seat chart success!",
+    "url_upload": "https://seat-chart.s3.amazonaws.com/available/1234_416.svg?AWSAccessKeyId=ASIA2G6CIH5XAYELOD5C&Signature=bb25Laz8JgAbOm2eMy%2FPHqFyw8M%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEDcaDmFwLXNvdXRoZWFzdC0xIkgwRgIhALxzLt%2FG2pv10l0iSOIpsw0Us70aM5OpSRmLNy3BMwwoAiEAv3OM%2FxmZdOUfPjGz7H4P0NHjfhUeQDZv%2B%2B2MEN1fy5YqnwMI0P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARADGgw3MDIwOTc2Njk5OTgiDEuX63NQGpPgrGb16irzAtxHZSjTy87f48Aes7SPp9OYBoK96RPvQuFTAu%2BsuqKHhDJHWqlwR0x6OFwlUQl5DfaCC8v6iYWFyHIYrjw7z632eztDwBZ%2FhP3zQllVTf2Ri1UGOSrEMVK9hpZNa4zK831A8KlCrRjfIUy9kGUwjc0RvnqOOLzmyhqLrn4LbNZjuRUDt%2B01gTyl5r2mKGL%2BdTWekwqoSQxWx%2F1aOjTEtuMSMqHCsAWzp0uf6%2B8Tc4h65oj6rRpO2qTg2NnZFHJc1P%2Fut3KerNla4yBFsC8MUsqqziFL9GDRL6EJ%2BeIKFdJGdNKOQsfAI0vX8yZsiLCRJ187j4bzKyjgY3mXRfwpbiOQOf2OuvkjalBK7I51gorrKf2payCobwVfPV9vCPBaEE2Z1oAkyaMoSHO9OBqTiKHuq1aOEuxBqmwJ0aiKD6XLy8ypCpg11BXFQCmVAun0PyVynqp2d3DYI3xIQwmaZ%2BxHQ6UnHjoSjSqxaLDQuoQZSVILMJG87qwGOpwBFUDbdHowUN5bzxwZThb7RTo1hMDe%2BAvBGzPEOZPYwTkNX7Okrw8IfeXU9n2Y3Thfa8TWw9OpzXKbxMVhDC775sgszCXsL8dZPWNFIOc2UGe3UR8FF7maI62FZf3m8kfZjoe2UEi9fHLsxh%2B55iWWDm8G2Mn%2FgMGRVq4Rp2BbgnEkNibRcicbcYQhFWwjrEcx219Q1W%2B5HGE3hezZ&Expires=1704700371",
+    "data": {
+        "id": 416
+    }
+}
+```
 - Validation check :
     - If one of required field is missing will be return `400` code and messenger . Example for `is_clone` is missng:
     ```
@@ -201,15 +211,71 @@ Explain the API used in the project.
         ]
     }
     ```
-    
-
- 
+    - If `is_clone`=false and Seat chart name already exists in the system will return code `400` and messenger error for example:
+    ```
+    {
+    "status": false,
+    "message": "Name: '111' already exists in the system"
+    }
+    ``` 
 ## CSC0004_updateSeatChart
 - PUT `/CSC0004/updateSeatChart`
-
-
-
-
+- Edit name and type of an existing seat chart.
+- The request body needs to be in JSON format and include the following properties:
+    - `id` - integer - required (must be the id of the seat chart available in the system)
+    - `name` - string - required (length from 2 to 20 and must **not** be the name of the seat chart available in the system)
+    - `type` - integer - required (must be 1 or 2) 
+- Example update success should return like that:
+```
+{
+    "status": true,
+    "message": "Update seatchart success.",
+    "url_upload": "https://seat-chart.s3.amazonaws.com/available/123_412.svg?AWSAccessKeyId=ASIA2G6CIH5XAXHECFJP&Signature=nCSpqJ8FTACHiyd5P8ItyltxbEY%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEDcaDmFwLXNvdXRoZWFzdC0xIkcwRQIgcJXZHAW2lwvmPmMTsq19ajuMlzoRF8dPrdi4zg%2FKaPQCIQDbGemWG5alUNyEExm4nCr7FCoHkXacZ8pYSo5wM64eXCqlAwjQ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAMaDDcwMjA5NzY2OTk5OCIM9aI%2F73bRw%2FuQRXsfKvkCZBgwtT5svwAUML%2BjBDganeoIaL0aNsuT1RoG2E5fo98t8mZLJ73dJWrApQ938D57sgKEQYcYlxwi%2BxKWK1UVXrRbHWfNYdjWTSdaiIHn3WvDtCuVWsCl2yRRx%2BkCFsqfe1VKlv4S%2FOjW4dgAQjvb%2BUvt5iIfoslNJOiJsXkRmaN9VjUrhst1SWVgG5H28cmfAYNpq23YjioXbjrPzpv1Fvf%2B0Vxh54D%2BDc7cutviYuKdpfXrg2kNW35FdJQusP%2B2XfEJpm0%2B5TOvZygc%2Bw%2FtGVXvhafMPbs1zE1JuIGGvONpieaqOMKv2sSxdrzihYFdGa4%2BK%2BdY%2B7tz7ediozQS6VqCiqIG5vj294UuG8rMXsFtvX5cF%2BcuQG5sCzhljqMSR3TJHi817lWiyAPmmkNsRd%2BnshvBK9NYISZx%2B0Yybw%2F2WkTMSqpA7Jk4A02tv3CJqYqKf%2B9k%2FxYAu0nQxmHnV7LESaunsWPd%2F5rEVMNByweu%2FNuRqlSmkmowjbjurAY6nQF71bYyfVi74SY8faXMit%2FcIQyaxPaz%2FS7rsDM8Zd8Q6FNTnfpljRolCI1TlRlNKm60J4wpIrvfYtObtBOGJfZDqb9%2BVXN5OWwuaveFZVsyUSJESn1kjSbjwQD3n2xlFaE%2Btq7kDn%2Fms7I4RbzBYAdT5ysNdjqUBZYc2WObIjcuPcq7jCpKcmgumY0o2rM9zcpHfkgvoGPSaZYGHgqt&Expires=1704700477"
+}
+```
+- validation check :
+    - If `name` not enought length from 2 to 20 will return code `400` and messenger error:
+    ```
+    "The Name of seatchart must have between 2 and 20 characters."
+    ```
+    - If `name` already exists in the system will return code `400` and messenger error for example:
+    ```
+    {
+    "status": false,
+    "message": "Name: '111' already exists in the system"
+    }
+    ```
+    - If input `id` is not a integer or blank will return error :
+    ```
+    {
+    "id": [
+        "Not a valid integer."
+        ]
+    }
+    ```
+    - If input `id` not already exists in the system will return code `404` and messenger error for example :
+    ```
+    {
+    "status": false,
+    "message": "Id: '9999' not found!"
+    }
+    ```
+    - If `type` is not an integer will return code `400` and messenger error for example:
+    ```
+    {
+    "type": [
+        "Not a valid integer."
+        ]
+    }
+    ```
+    - If `type` is not 1 or 2 will return code `400` and messenger error for example:
+    ```
+    {
+    "type": [
+        "Must be one of: 1, 2."
+        ]
+    }
+    ```
 ## CSC0004_deleteSeatChart
 - DELETE `/CSC0004/deleteSeatChart`
 - Delete an existing seat chart.
