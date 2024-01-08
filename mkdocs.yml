@@ -9,7 +9,6 @@ nav:
       - UISketch_MemberManagement: UI Sketch/UISketch_MemberManagement/index.md
       - UISketch_SeatChart: UI Sketch/UISketch_SeatChart/index.md
       - UISketch_SeatManagement: UI Sketch/UISketch_SeatManagement/index.md
-  - Layout and Design: Layout and Design/index.md
   - Architecture and Convention:
       - Architecture: Architecture and Convention/Architecture/index.md
       - Convention:
