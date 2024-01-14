@@ -1,0 +1,44 @@
+D:\Project\demo-mkdocs
+├── docs
+|  ├── API
+|  ├── Architecture and Convention
+|  ├── Changelog
+|  ├── Directory Structure
+|  ├── Files
+|  ├── index.md
+|  ├── overrides
+|  ├── stylesheets
+|  ├── Translate
+|  ├── UI Sketch
+|  └── Validation
+├── homebrew
+|  ├── bin
+|  ├── CHANGELOG.md
+|  ├── completions
+|  ├── CONTRIBUTING.md
+|  ├── Dockerfile
+|  ├── docs
+|  ├── Library
+|  ├── LICENSE.txt
+|  ├── manpages
+|  ├── package
+|  └── README.md
+├── mkdocs.yml
+└── site
+   ├── 404.html
+   ├── API
+   ├── Architecture and Convention
+   ├── assets
+   ├── Changelog
+   ├── Files
+   ├── index.html
+   ├── search
+   ├── sitemap.xml
+   ├── sitemap.xml.gz
+   ├── stylesheets
+   ├── Translate
+   ├── UI Sketch
+   └── Validation
+
+directory: 29 file: 11
+

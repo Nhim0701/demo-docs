@@ -15,6 +15,9 @@ nav:
           - API Back-End: Architecture and Convention/Convention/API Back-End/index.md
           - Font-End: Architecture and Convention/Convention/Front-End/index.md
           - Các quy tắc khác: Architecture and Convention/Convention/Các quy tắc khác/index.md
+  - Directory Structure: 
+      - Back-End Directory: Directory Structure/Back-End Directory/index.md
+      - Front-End Directory: Directory Structure/Front-End Directory/index.md
   - API: API/index.md
   - Validation: Validation/index.md
 extra_css:
