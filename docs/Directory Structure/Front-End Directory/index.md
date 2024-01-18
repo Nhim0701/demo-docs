@@ -80,31 +80,31 @@
    └── validators.ts
 ```
 ## Description
-:fontawesome-regular-folder:
+### :fontawesome-regular-folder: API
 `api`Chứa các tệp TypeScript xử lý giao tiếp với API backend
-:fontawesome-regular-folder:
+### :fontawesome-regular-folder: assets
 `assets`Chứa các tệp tĩnh như hình ảnh, phông chữ, tệp SVG, CSS, SCSS và icon.
-:fontawesome-regular-folder:
+### :fontawesome-regular-folder: ci
 `ci`Chứa các tệp liên quan đến tích hợp liên tục (CI) và triển khai liên tục (CD), bao gồm Dockerfile, Chart Helm, và version.txt.
-:fontawesome-regular-folder:
+### :fontawesome-regular-folder: components
 `components`Chứa các thành phần Vue có thể tái sử dụng
-:fontawesome-regular-folder:
+### :fontawesome-regular-folder: composables
 `composables`Chứa các hàm có thể sử dụng lại trong các thành phần
-:fontawesome-regular-folder:
-`constants`Chứa các hằng số dùng chung trong ứng dụng, bao gồm API constants
-:fontawesome-regular-folder:
+### :fontawesome-regular-folder: constants
+`constants`Chứa các hằng số dùng chung trong ứng dụng, bao gồm API constants 
+### :fontawesome-regular-folder: layouts
 `layouts`Chứa các layout chung cho các trang khác nhau, hiện có layout mặc định (default.vue).
-:fontawesome-regular-folder:
+### :fontawesome-regular-folder: libs
 `libs`Chứa các thư viện riêng của dự án
-:fontawesome-regular-folder:
+### :fontawesome-regular-folder: locales
 `locales`Chứa các tệp bản dịch(Anh,Nhật,Việt)
-:fontawesome-regular-folder:
+### :fontawesome-regular-folder: middleware
 `middleware`Chứa các middleware của Nuxt, hiện có middleware xác thực toàn cục (auth.global.ts).
-:fontawesome-regular-folder:
+### :fontawesome-regular-folder: pages
 `pages`Chứa các tệp định nghĩa các trang của ứng dụng
-:fontawesome-regular-folder:
+### :fontawesome-regular-folder: plugins
 `plugins`Chứa các plugin Nuxt để mở rộng chức năng của ứng dụng
-:fontawesome-regular-folder:
+### :fontawesome-regular-folder: public
 `public`Chứa các tệp tĩnh sẽ được sao chép trực tiếp vào thư mục public khi ứng dụng được xây dựng
-:fontawesome-regular-folder:
+### :fontawesome-regular-folder: utils
 `utils`Chứa các hàm tiện ích chung, bao gồm các hàm common và hàm kiểm tra dữ liệu (validators.ts).
