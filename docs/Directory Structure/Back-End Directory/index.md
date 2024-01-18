@@ -71,43 +71,23 @@
 ```
 
 ## Description
-
-:fontawesome-regular-folder:
-### terraform
+### :fontawesome-regular-folder:terraform
 `.terraform`Folder này để chứa các plugins khi sử dụng terraform init thì nó sẽ tải xuống các plugins và lưu vào folder này
-
-:fontawesome-regular-folder:
-### code
+### :fontawesome-regular-folder:code
 `code`Chứa các hàm lambda xử lý logic của API
-
-:fontawesome-regular-folder:
-### modules
+### :fontawesome-regular-folder:modules
 `modules`Folder `modules` này dùng để chứa các modules con như lambda, api gateway, iam_role, lambda_layer_version
-
-:fontawesome-regular-folder:
-### python
+### :fontawesome-regular-folder:python
 `python`chứa các file thư viện tải xuống từ kho package, hoặc các file commons chứa các hàm xử lý dùng chung
-
-:fontawesome-regular-file:
-### terraform.lock.hcl
+### :fontawesome-regular-file:terraform.lock.hcl
 `.terraform.lock.hcl`File này chứa các thông tin cụ thể như key phiên bản của các modules và các plugins để tránh xung đột phiên bản, được tạo ra khi sử dụng terraform init
-
-:fontawesome-regular-file:
-### main.tf
+### :fontawesome-regular-file:main.tf
 `main.tf`File này dùng để chứa các modules như là lambda, api gateway
-
-:fontawesome-regular-file:
-### requirements.txt
+### :fontawesome-regular-file:requirements.txt
 `requirements.txt`chứa danh sách các tên package được sử dụng trong source 
-
-:fontawesome-regular-file:
-### variables.tf
+### :fontawesome-regular-file:variables.tf
 `variables.tf`File này để chứa các biến để sử dụng cho bên trong file main.tf, nếu nó được khai báo trong folder nào thì nó sẽ là khai báo biến cho file main.tf cùng cấp
-
-:fontawesome-regular-file:
-### variables.tfvars
+### :fontawesome-regular-file:variables.tfvars
 `variables.tfvars`Thông thường file này sẽ chứa giá trị của các biến đã được khai báo
-
-:fontawesome-regular-file:
-### terraform.tfstate
+### :fontawesome-regular-file:terraform.tfstate
 `terraform.tfstate`File này dùng để chứa thông tin các modules như id của modules, trạng thái của modules ( đã được tạo,... ), quản lý các tài nguyên để cho khi lần sau sử dụng terraform apply nó xác định được cần update cái nào và cần tạo mới cái nào ( file này tương đối quan trọng)
