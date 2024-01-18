@@ -1,6 +1,3 @@
-# Demo ci
-
-
 # Seat Chart Project tesst
 1. With the need to constantly change seats according to each project, plus the expanding company scale, changing seats in the traditional way (on paper) becomes difficult and inconvenient.
 2. With the traditional method, it is not possible to produce many manuscripts at the same time, nor can you pre-arrange manuscripts for the future.
