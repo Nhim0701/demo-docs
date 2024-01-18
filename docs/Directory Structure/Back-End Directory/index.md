@@ -71,15 +71,23 @@
 ```
 
 ## Description
-1. .terraform	Folder này để chứa các plugins khi sử dụng terraform init thì nó sẽ tải xuống các plugins và lưu vào folder này
-2. code	Chứa các hàm lambda xử lý logic của API
-3. modules	Folder modules này dùng để chứa các modules con như lambda, api gateway, iam_role, lambda_layer_version
-4. python	chứa các file thư viện tải xuống từ kho package, hoặc các file commons chứa các hàm xử lý dùng chung
-5. .gitignore	A .gitignore file specifies intentionally untracked files that Git should ignore. Files already tracked by Git are not affected
-6. .terraform.lock.hcl	File này chứa các thông tin cụ thể như key phiên bản của các modules và các plugins để tránh xung đột phiên bản, được tạo ra khi sử dụng terraform init
-7. main.tf	File này dùng để chứa các modules như là lambda, api gateway
-8. README.md	A README.md file to project installation guide
-9. requirements.txt	chứa danh sách các tên package được sử dụng trong source 
-10. variables.tf	File này để chứa các biến để sử dụng cho bên trong file main.tf, nếu nó được khai báo trong folder nào thì nó sẽ là khai báo biến cho file main.tf cùng cấp
-11. variables.tfvars	Thông thường file này sẽ chứa giá trị của các biến đã được khai báo
-12. terraform.tfstate	File này dùng để chứa thông tin các modules như id của modules, trạng thái của modules ( đã được tạo,... ), quản lý các tài nguyên để cho khi lần sau sử dụng terraform apply nó xác định được cần update cái nào và cần tạo mới cái nào ( file này tương đối quan trọng)
+:fontawesome-regular-folder:
+`.terraform`Folder này để chứa các plugins khi sử dụng terraform init thì nó sẽ tải xuống các plugins và lưu vào folder này
+:fontawesome-regular-folder:
+`code`Chứa các hàm lambda xử lý logic của API
+:fontawesome-regular-folder:
+`modules`Folder `modules` này dùng để chứa các modules con như lambda, api gateway, iam_role, lambda_layer_version
+:fontawesome-regular-folder:
+`python`chứa các file thư viện tải xuống từ kho package, hoặc các file commons chứa các hàm xử lý dùng chung
+:fontawesome-regular-file:
+`.terraform.lock.hcl`File này chứa các thông tin cụ thể như key phiên bản của các modules và các plugins để tránh xung đột phiên bản, được tạo ra khi sử dụng terraform init
+:fontawesome-regular-file:
+`main.tf`File này dùng để chứa các modules như là lambda, api gateway
+:fontawesome-regular-file:
+`requirements.txt`chứa danh sách các tên package được sử dụng trong source 
+:fontawesome-regular-file:
+`variables.tf`File này để chứa các biến để sử dụng cho bên trong file main.tf, nếu nó được khai báo trong folder nào thì nó sẽ là khai báo biến cho file main.tf cùng cấp
+:fontawesome-regular-file:
+`variables.tfvars`Thông thường file này sẽ chứa giá trị của các biến đã được khai báo
+:fontawesome-regular-file:
+`terraform.tfstate`File này dùng để chứa thông tin các modules như id của modules, trạng thái của modules ( đã được tạo,... ), quản lý các tài nguyên để cho khi lần sau sử dụng terraform apply nó xác định được cần update cái nào và cần tạo mới cái nào ( file này tương đối quan trọng)
