@@ -883,73 +883,74 @@
 
 
 <h1 id="back-end-directory">Back-End Directory</h1>
-<p>├── code
-|  ├── csc0002_listSeatChartName.py
-|  ├── csc0002_seatChart2DDetail.py
-|  ├── csc0003_listEmployee.py
-|  ├── csc0003_listEmployee_data.json
-|  ├── csc0004_addModel.py
-|  ├── csc0004_addSeatChart.py
-|  ├── csc0004_deleteModel.py
-|  ├── csc0004_deleteSeatChart.py
-|  ├── csc0004_listSeatChartName.py
-|  ├── csc0004_seatChartDetail.py
-|  ├── csc0004_updateModel.py
-|  ├── csc0004_updateSeatChart.py
-|  └── getSvgS3.py
-├── main.tf
-├── modules
-|  ├── api-gateway
-|  ├── api_resource
-|  ├── api_resource_child
-|  ├── iam_role
-|  └── lambda_layer_version
-├── python
-|  ├── bin
-|  ├── boto3
-|  ├── boto3-1.34.3.dist-info
-|  ├── botocore
-|  ├── botocore-1.34.3.dist-info
-|  ├── certifi
-|  ├── certifi-2023.11.17.dist-info
-|  ├── charset_normalizer
-|  ├── charset_normalizer-3.3.2.dist-info
-|  ├── const.py
-|  ├── dateutil
-|  ├── db_connection.py
-|  ├── db_select.py
-|  ├── fuzzywuzzy
-|  ├── fuzzywuzzy-0.18.0.dist-info
-|  ├── idna
-|  ├── idna-3.6.dist-info
-|  ├── jmespath
-|  ├── jmespath-1.0.1.dist-info
-|  ├── jwt
-|  ├── marshmallow
-|  ├── marshmallow-3.20.1.dist-info
-|  ├── packaging
-|  ├── packaging-23.2.dist-info
-|  ├── psycopg2
-|  ├── psycopg2-2.9.9.dist-info
-|  ├── psycopg2_binary-2.9.9.dist-info
-|  ├── psycopg2_binary.libs
-|  ├── PyJWT-2.8.0.dist-info
-|  ├── python_dateutil-2.8.2.dist-info
-|  ├── requests
-|  ├── requests-2.31.0.dist-info
-|  ├── s3transfer
-|  ├── s3transfer-0.9.0.dist-info
-|  ├── s3_utils.py
-|  ├── six-1.16.0.dist-info
-|  ├── six.py
-|  ├── urllib3
-|  ├── urllib3-2.0.7.dist-info
-|  ├── urllib3-2.1.0.dist-info
-|  └── utils.py
-├── README.md
-├── requirements.txt
-├── variables.tf
-└── variables.tfvars</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>├── code
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>|  ├── csc0002_listSeatChartName.py
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>|  ├── csc0002_seatChart2DDetail.py
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>|  ├── csc0003_listEmployee.py
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>|  ├── csc0003_listEmployee_data.json
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>|  ├── csc0004_addModel.py
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>|  ├── csc0004_addSeatChart.py
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>|  ├── csc0004_deleteModel.py
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>|  ├── csc0004_deleteSeatChart.py
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>|  ├── csc0004_listSeatChartName.py
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>|  ├── csc0004_seatChartDetail.py
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>|  ├── csc0004_updateModel.py
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>|  ├── csc0004_updateSeatChart.py
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>|  └── getSvgS3.py
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>├── main.tf
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>├── modules
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>|  ├── api-gateway
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>|  ├── api_resource
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>|  ├── api_resource_child
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>|  ├── iam_role
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>|  └── lambda_layer_version
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>├── python
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>|  ├── bin
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>|  ├── boto3
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>|  ├── boto3-1.34.3.dist-info
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>|  ├── botocore
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>|  ├── botocore-1.34.3.dist-info
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>|  ├── certifi
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>|  ├── certifi-2023.11.17.dist-info
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>|  ├── charset_normalizer
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>|  ├── charset_normalizer-3.3.2.dist-info
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>|  ├── const.py
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>|  ├── dateutil
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>|  ├── db_connection.py
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>|  ├── db_select.py
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>|  ├── fuzzywuzzy
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>|  ├── fuzzywuzzy-0.18.0.dist-info
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>|  ├── idna
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>|  ├── idna-3.6.dist-info
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>|  ├── jmespath
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>|  ├── jmespath-1.0.1.dist-info
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>|  ├── jwt
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>|  ├── marshmallow
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>|  ├── marshmallow-3.20.1.dist-info
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>|  ├── packaging
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>|  ├── packaging-23.2.dist-info
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>|  ├── psycopg2
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>|  ├── psycopg2-2.9.9.dist-info
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>|  ├── psycopg2_binary-2.9.9.dist-info
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>|  ├── psycopg2_binary.libs
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>|  ├── PyJWT-2.8.0.dist-info
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>|  ├── python_dateutil-2.8.2.dist-info
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>|  ├── requests
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>|  ├── requests-2.31.0.dist-info
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>|  ├── s3transfer
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>|  ├── s3transfer-0.9.0.dist-info
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>|  ├── s3_utils.py
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>|  ├── six-1.16.0.dist-info
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>|  ├── six.py
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>|  ├── urllib3
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>|  ├── urllib3-2.0.7.dist-info
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>|  ├── urllib3-2.1.0.dist-info
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>|  └── utils.py
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>├── README.md
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>├── requirements.txt
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>├── variables.tf
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>└── variables.tfvars
+</span></code></pre></div>
 <h2 id="description">Description</h2>
 <ol>
 <li>.terraform   Folder này để chứa các plugins khi sử dụng terraform init thì nó sẽ tải xuống các plugins và lưu vào folder này</li>

@@ -1,4 +1,5 @@
 # Back-End Directory
+```
 ├── code
 |  ├── csc0002_listSeatChartName.py
 |  ├── csc0002_seatChart2DDetail.py
@@ -66,6 +67,7 @@
 ├── requirements.txt
 ├── variables.tf
 └── variables.tfvars
+```
 ## Description
 1. .terraform	Folder này để chứa các plugins khi sử dụng terraform init thì nó sẽ tải xuống các plugins và lưu vào folder này
 2. code	Chứa các hàm lambda xử lý logic của API
